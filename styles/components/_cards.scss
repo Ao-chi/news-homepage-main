@@ -1,0 +1,27 @@
+.card {
+    @include display-flex;
+    justify-content: flex-start;
+
+    .card_image {
+        height: 10rem;
+        float: left;
+
+        img {
+            height: 100%;
+            -o-object-fit: contain;
+            object-fit: contain;
+        }
+    }
+    .card-body {
+        padding: $p-1_5;
+        height: 100%;
+
+        h1 {
+            font-size: $h1-font-size;
+            color: $grayish-blue;
+        }
+        .card-desc p {
+            color: $dark-grayish-blue;
+        }
+    }
+}

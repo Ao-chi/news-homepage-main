@@ -1,0 +1,44 @@
+// font family
+@mixin Inter-font {
+    font-family: "Inter", sans-serif;
+}
+
+// display flex
+@mixin display-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// breakpoints
+@mixin breakpoint($breakpoint: md, $key: min, $orientation: false) {
+    @if ($orientation) {
+        @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+// h5 links {
+@mixin h5_links {
+    h5 {
+        color: $dark-blue;
+        a {
+            color: $dark-blue;
+            transition: ease-in-out 0.2s;
+            &:hover {
+                color: $soft-red;
+            }
+        }
+    }
+}
+
+// visiblity and opacity
+@mixin opacity_visibility-hidden {
+    visibility: hidden;
+    opacity: 0;
+}

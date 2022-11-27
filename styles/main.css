@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.4;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card .card_image {
+  height: 10rem;
+  float: left;
+}
+.card .card_image img {
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.card .card-body {
+  padding: 1.5rem;
+  height: 100%;
+}
+.card .card-body h1 {
+  font-size: 50px;
+  color: hsl(233deg, 8%, 79%);
+}
+.card .card-body .card-desc p {
+  color: hsl(236deg, 13%, 42%);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: 80px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 90px;
+  width: 100%;
+}
+header nav .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+header nav .menu-containers .menu-items {
+  display: flex;
+}
+header nav .menu-containers .menu-items li {
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+}
+header nav .menu-containers .menu-items li a {
+  color: hsl(236deg, 13%, 42%);
+}
+header nav .menu-containers .menu-items li a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+@media (max-width: 992px) {
+  header nav .menu-containers .menu-items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    padding: 1.5rem;
+    height: 100%;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: ease-in-out 0.2s;
+  }
+  header nav .menu-containers .menu-items.active {
+    visibility: visible;
+    opacity: 1;
+    width: 300px;
+  }
+}
+header nav .menu_close,
+header nav .menu_open {
+  display: none;
+}
+@media (max-width: 992px) {
+  header nav .menu_open {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    z-index: 1;
+    cursor: pointer;
+  }
+  header nav .menu_close {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    z-index: 1;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+section {
+  margin-top: 90px;
+}
+section .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 90px;
+}
+section .grid-container {
+  display: grid;
+  padding: 1rem;
+  gap: 2rem 1.5rem;
+  grid-template-areas: "banner" "s2" "new" "c1" "c2" "c3";
+}
+@media (min-width: 992px) {
+  section .grid-container {
+    padding: 3rem 0;
+    grid-template-areas: "banner    banner    banner    banner        new" "s2        s2        s2        s2            new" "c1        c1        c2        c2            c3";
+  }
+}
+section .banner {
+  grid-area: banner;
+  background-image: url("/assets/images/image-web-3-mobile.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+@media (min-width: 992px) {
+  section .banner {
+    background-image: url("/assets/images/image-web-3-desktop.jpg");
+    height: 300px;
+  }
+}
+section .new {
+  grid-area: new;
+  background: hsl(240deg, 100%, 5%);
+  padding: 1rem;
+}
+section .new h1 {
+  font-size: 50px;
+  color: hsl(35deg, 77%, 62%);
+}
+section .new .new-items {
+  padding: 1.5rem 0;
+}
+section .new .new-items:nth-child(2), section .new .new-items:nth-child(3) {
+  border-bottom: 0.5px solid hsl(233deg, 8%, 79%);
+}
+section .new .new-items h5 {
+  font-size: 1.25rem;
+  color: hsl(36deg, 100%, 99%);
+}
+section .new .new-items h5 a {
+  color: hsl(36deg, 100%, 99%);
+  transition: ease-in-out 0.2s;
+}
+section .new .new-items h5 a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+section .new .new-items p {
+  color: hsl(36deg, 100%, 99%);
+}
+section .bright_future {
+  grid-area: s2;
+  display: flex;
+  flex-direction: column;
+}
+section .bright_future h1 {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1;
+  padding-right: 1.5rem;
+  padding-bottom: 3rem;
+}
+section .bright_future button {
+  background: hsl(5deg, 85%, 63%);
+  border: 1px solid hsl(5deg, 85%, 63%);
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+section .bright_future button a {
+  color: hsl(36deg, 100%, 99%);
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin: 0 0.5rem;
+}
+section .bright_future button:hover {
+  background: hsl(240deg, 100%, 5%);
+  border: 1px solid hsl(240deg, 100%, 5%);
+}
+@media (min-width: 992px) {
+  section .bright_future {
+    flex-direction: row;
+  }
+  section .bright_future h1 {
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+  }
+  section .bright_future .desc {
+    padding: 0 1.5rem;
+  }
+}
+section .c1 {
+  grid-area: c1;
+}
+section .c2 {
+  grid-area: c2;
+}
+section .c3 {
+  grid-area: c3;
+}
+section .c1,
+section .c2,
+section .c3 {
+  position: relative;
+}
+section .c1 h5,
+section .c2 h5,
+section .c3 h5 {
+  color: hsl(240deg, 100%, 5%);
+}
+section .c1 h5 a,
+section .c2 h5 a,
+section .c3 h5 a {
+  color: hsl(240deg, 100%, 5%);
+  transition: ease-in-out 0.2s;
+}
+section .c1 h5 a:hover,
+section .c2 h5 a:hover,
+section .c3 h5 a:hover {
+  color: hsl(5deg, 85%, 63%);
+}/*# sourceMappingURL=main.css.map */
