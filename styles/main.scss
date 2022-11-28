@@ -18,9 +18,15 @@ section {
 
     .wrapper {
         @include display-flex;
-        margin: 0 90px;
-        //width: 1200px;
-        //margin: 0 100px;
+
+        @include breakpoint(md, min) {
+            margin: 0 50px;
+            padding: 0 1rem;
+        }
+        @include breakpoint(lg, min) {
+            margin: 0 90px;
+            padding: 0 4rem;
+        }
     }
 
     .grid-container {
@@ -31,17 +37,42 @@ section {
         grid-template-areas:
             "banner"
             "s2"
+            "desc"
             "new"
-            "c1"
-            "c2"
-            "c3";
+            "cards";
 
         @include breakpoint(md, min) {
             padding: $p-3 0;
+            grid-template-columns: repeat(6, 1fr);
             grid-template-areas:
-                "banner    banner    banner    banner        new"
-                "s2        s2        s2        s2            new"
-                "c1        c1        c2        c2            c3";
+                "banner    banner    banner     banner      new   new"
+                "s2        s2        desc       desc        new   new"
+                "cards     cards     cards      cards     cards   cards";
+        }
+        .cards {
+            margin-top: $p-3;
+            grid-area: cards;
+            display: grid;
+            gap: 1rem;
+            grid-template-areas:
+                "c1"
+                "c2"
+                "c3";
+            .c1 {
+                grid-area: c1;
+            }
+            .c2 {
+                grid-area: c2;
+            }
+            .c3 {
+                grid-area: c3;
+                //padding-left: 1rem;
+            }
+            @include breakpoint(md, min) {
+                margin-top: 0;
+                grid-template-areas: "c1  c2    c3";
+                gap: 2.5rem;
+            }
         }
     }
     .banner {
@@ -49,20 +80,19 @@ section {
         background-image: url("/assets/images/image-web-3-mobile.jpg");
         background-position: center center;
         background-size: 100% 100%;
-        object-fit: contain;
+        object-fit: cover;
         background-repeat: no-repeat;
-        height: 500px;
+        height: 300px;
 
         @include breakpoint(md, min) {
             background-image: url("/assets/images/image-web-3-desktop.jpg");
-            height: 300px;
         }
     }
 
     .new {
         grid-area: new;
         background: $dark-blue;
-        padding: 1rem;
+        padding: $p-1_5;
 
         h1 {
             font-size: $h1-font-size;
@@ -87,7 +117,7 @@ section {
                 }
             }
             p {
-                color: $off-white;
+                color: $grayish-blue;
             }
         }
     }
@@ -101,9 +131,26 @@ section {
             font-weight: font-weight(font-bolder);
             line-height: 1;
             padding-right: $p-1_5;
-            padding-bottom: $p-3;
+            //padding-bottom: $p-3;
         }
 
+        @include breakpoint(md, min) {
+            flex-direction: row;
+            h1 {
+                padding-bottom: $p-1;
+            }
+            .desc {
+                padding: 0 $p-1_5;
+            }
+        }
+    }
+
+    .desc {
+        grid-area: desc;
+        padding-bottom: $p-3;
+        p {
+            padding-bottom: $p-1;
+        }
         button {
             background: $soft-red;
             border: 1px solid $soft-red;
@@ -124,33 +171,20 @@ section {
                 border: 1px solid $dark-blue;
             }
         }
-
         @include breakpoint(md, min) {
-            flex-direction: row;
-            h1 {
-                padding-right: $p-3;
-                padding-bottom: $p-1;
-            }
-            .desc {
-                padding: 0 $p-1_5;
-            }
+            //padding: 0 $p-1_5;
         }
-    }
-
-    .c1 {
-        grid-area: c1;
-    }
-    .c2 {
-        grid-area: c2;
-    }
-    .c3 {
-        grid-area: c3;
     }
 
     .c1,
     .c2,
     .c3 {
-        @include h5_links;
+        @include h4_links;
         position: relative;
     }
+}
+.attribution {
+    font-size: font-size(font-12);
+    text-align: center;
+    margin-bottom: $p-1;
 }

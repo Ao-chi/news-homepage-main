@@ -11,7 +11,7 @@
     <body>
         <header>
             <div class="wrapper">
-                <div class="logo_holder">
+                <div class="logo-container">
                     <img src="/assets/images/logo.svg" alt="desktop_logo" />
                 </div>
                 <nav>
@@ -25,12 +25,11 @@
                             <li><a href="#">Categories</a></li>
                         </ul>
                     </div>
-                    <div class="menu_close">
-                        <img src="/assets/images/icon-menu-close.svg" alt="" srcset="" />
-                    </div>
-                    <div class="menu_open">
-                        <img src="/assets/images/icon-menu.svg" alt="" srcset="" />
-                    </div>
+                    <button type="button" class="nav-toggle">
+                        <!--<img src="/assets/images/icon-menu.svg" alt="" srcset="" />-->
+                        <span class="icon-menu"><img src="/assets/images/icon-menu.svg" alt="" srcset="" /></span>
+                        <span class="icon-close"><img src="/assets/images/icon-menu-close.svg" alt="" srcset="" /></span>
+                    </button>
                 </nav>
             </div>
         </header>
@@ -55,54 +54,55 @@
                     </div>
                     <div class="bright_future s2">
                         <h1>The Bright Future of Web 3.0?</h1>
-                        <div class="desc">
-                            <p>
-                                We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
-                                people. But is it really fulfulling it's promise?
-                            </p>
-                            <button><a href="#">Read more</a></button>
-                        </div>
                     </div>
-
-                    <div class="card c1">
-                        <div class="card_image">
-                            <img src="/assets/images/image-retro-pcs.jpg" alt="" />
-                        </div>
-                        <div class="card-body">
-                            <h1>01</h1>
-                            <div class="card_title">
-                                <h5><a href="#">Reviving Retro PCs</a></h5>
-                            </div>
-                            <div class="card-desc">
-                                <p>What happens when old PCs are given modern upgrades?</p>
-                            </div>
-                        </div>
+                    <div class="desc">
+                        <p>
+                            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
+                            people. But is it really fulfulling it's promise?
+                        </p>
+                        <button><a href="#">Read more</a></button>
                     </div>
-                    <div class="card c2">
-                        <div class="card_image">
-                            <img src="/assets/images/image-top-laptops.jpg" alt="" />
-                        </div>
-                        <div class="card-body">
-                            <h1>02</h1>
-                            <div class="card_title">
-                                <h5><a href="#">Top Laptops of 2022</a></h5>
+                    <div class="cards">
+                        <div class="card c1">
+                            <div class="card_image">
+                                <img src="/assets/images/image-retro-pcs.jpg" alt="" />
                             </div>
-                            <div class="card-desc">
-                                <p>Our best picks for various needs and budget.</p>
+                            <div class="card-body">
+                                <h1>01</h1>
+                                <div class="card_title">
+                                    <h4><a href="#">Reviving Retro PCs</a></h4>
+                                </div>
+                                <div class="card-desc">
+                                    <p>What happens when old PCs are given modern upgrades?</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card c3">
-                        <div class="card_image">
-                            <img src="/assets/images/image-gaming-growth.jpg" alt="" />
-                        </div>
-                        <div class="card-body">
-                            <h1>03</h1>
-                            <div class="card_title">
-                                <h5><a href="#">The Growth of Gaming</a></h5>
+                        <div class="card c2">
+                            <div class="card_image">
+                                <img src="/assets/images/image-top-laptops.jpg" alt="" />
                             </div>
-                            <div class="card-desc">
-                                <p>How the pandemic sparks new opportunities.</p>
+                            <div class="card-body">
+                                <h1>02</h1>
+                                <div class="card_title">
+                                    <h4><a href="#">Top Laptops of 2022</a></h4>
+                                </div>
+                                <div class="card-desc">
+                                    <p>Our best picks for various needs and budget.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card c3">
+                            <div class="card_image">
+                                <img src="/assets/images/image-gaming-growth.jpg" alt="" />
+                            </div>
+                            <div class="card-body">
+                                <h1>03</h1>
+                                <div class="card_title">
+                                    <h4><a href="#">The Growth of Gaming</a></h4>
+                                </div>
+                                <div class="card-desc">
+                                    <p>How the pandemic sparks new opportunities.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
