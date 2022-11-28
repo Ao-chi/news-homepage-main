@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: https://github.com/Ao-chi/news-homepage-main.git
--   Live Site URL:
+-   Live Site URL: https://news-homepage12345.netlify.app/
 
 ## My process
 
