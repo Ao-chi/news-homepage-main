@@ -23,6 +23,7 @@ $font-sizes: (
     font-14: 14px,
     font-15: 15px,
     font-16: 1rem,
+    font-18: 18px,
     font-20: 20px,
     font-22: 22px,
     font-24: 24px,
@@ -36,7 +37,7 @@ $font-sizes: (
 
 //font sizes
 $h1-font-size: font-size(font-50);
-$h2-font-size: font-size(font-32);
+$h2-font-size: font-size(font-40);
 $h3-font-size: 1.75rem;
 $h4-font-size: font-size(font-32);
 $h5-font-size: 1.25rem;

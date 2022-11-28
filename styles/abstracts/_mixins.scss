@@ -26,6 +26,7 @@
 // h5 links {
 @mixin h4_links {
     h4 {
+        font-weight: font-weight(font-bolder);
         color: $dark-blue;
         a {
             color: $dark-blue;

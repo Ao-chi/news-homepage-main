@@ -3,7 +3,7 @@
     justify-content: flex-start;
 
     .card_image {
-        height: 9rem;
+        height: 7.5rem;
         float: left;
 
         img {
@@ -14,15 +14,20 @@
     }
     .card-body {
         padding: 0 $p-1_5;
-        margin-top: -1rem;
+        margin-top: -0.875rem;
         height: 100%;
 
         h1 {
-            font-size: $h1-font-size;
+            font-size: $h2-font-size;
             color: $grayish-blue;
         }
+
         .card-desc p {
             color: $dark-grayish-blue;
+        }
+
+        @include breakpoint(md, max) {
+            padding-right: $p-0;
         }
     }
 }

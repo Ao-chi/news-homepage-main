@@ -81,6 +81,7 @@ h5 {
 p {
   font-size: 15px;
   margin-bottom: 1rem;
+  color: hsl(236deg, 13%, 42%);
 }
 
 .card {
@@ -88,7 +89,7 @@ p {
   justify-content: flex-start;
 }
 .card .card_image {
-  height: 9rem;
+  height: 7.5rem;
   float: left;
 }
 .card .card_image img {
@@ -98,15 +99,20 @@ p {
 }
 .card .card-body {
   padding: 0 1.5rem;
-  margin-top: -1rem;
+  margin-top: -0.875rem;
   height: 100%;
 }
 .card .card-body h1 {
-  font-size: 50px;
+  font-size: 40px;
   color: hsl(233deg, 8%, 79%);
 }
 .card .card-body .card-desc p {
   color: hsl(236deg, 13%, 42%);
+}
+@media (max-width: 992px) {
+  .card .card-body {
+    padding-right: 0;
+  }
 }
 
 header {
@@ -156,7 +162,7 @@ header nav .overlay {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(4, 2, 15, 0.6);
   visibility: hidden;
   opacity: 0;
   z-index: 1;
@@ -194,7 +200,7 @@ header nav .menu-containers .menu-items li a:hover {
     justify-content: flex-start;
     background: #fff;
     padding: 1rem;
-    padding-top: 13rem;
+    padding-top: 10rem;
     height: 100%;
     width: 0;
     z-index: 1;
@@ -287,37 +293,15 @@ section .wrapper {
 section .grid-container {
   display: grid;
   padding: 1rem;
-  gap: 2rem 1.5rem;
+  gap: 1rem;
   grid-template-areas: "banner" "s2" "desc" "new" "cards";
 }
 @media (min-width: 992px) {
   section .grid-container {
     padding: 3rem 0;
     grid-template-columns: repeat(6, 1fr);
+    gap: 2rem 1.5rem;
     grid-template-areas: "banner    banner    banner     banner      new   new" "s2        s2        desc       desc        new   new" "cards     cards     cards      cards     cards   cards";
-  }
-}
-section .grid-container .cards {
-  margin-top: 3rem;
-  grid-area: cards;
-  display: grid;
-  gap: 1rem;
-  grid-template-areas: "c1" "c2" "c3";
-}
-section .grid-container .cards .c1 {
-  grid-area: c1;
-}
-section .grid-container .cards .c2 {
-  grid-area: c2;
-}
-section .grid-container .cards .c3 {
-  grid-area: c3;
-}
-@media (min-width: 992px) {
-  section .grid-container .cards {
-    margin-top: 0;
-    grid-template-areas: "c1  c2    c3";
-    gap: 3rem;
   }
 }
 section .banner {
@@ -373,7 +357,7 @@ section .bright_future {
   flex-direction: column;
 }
 section .bright_future h1 {
-  font-size: 54px;
+  font-size: 40px;
   font-weight: 800;
   line-height: 1;
   padding-right: 1.5rem;
@@ -383,6 +367,7 @@ section .bright_future h1 {
     flex-direction: row;
   }
   section .bright_future h1 {
+    font-size: 54px;
     padding-bottom: 1rem;
   }
   section .bright_future .desc {
@@ -408,11 +393,34 @@ section .desc button a {
   color: hsl(36deg, 100%, 99%);
   font-size: 12px;
   letter-spacing: 5px;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 section .desc button:hover {
   background: hsl(240deg, 100%, 5%);
   border: 1px solid hsl(240deg, 100%, 5%);
+}
+section .cards {
+  padding-top: 3rem;
+  grid-area: cards;
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "c1" "c2" "c3";
+}
+section .cards .c1 {
+  grid-area: c1;
+}
+section .cards .c2 {
+  grid-area: c2;
+}
+section .cards .c3 {
+  grid-area: c3;
+}
+@media (min-width: 992px) {
+  section .cards {
+    padding-top: 2rem;
+    grid-template-areas: "c1  c2    c3";
+    gap: 3rem;
+  }
 }
 section .c1,
 section .c2,
@@ -422,6 +430,7 @@ section .c3 {
 section .c1 h4,
 section .c2 h4,
 section .c3 h4 {
+  font-weight: 800;
   color: hsl(240deg, 100%, 5%);
 }
 section .c1 h4 a,
