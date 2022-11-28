@@ -71,21 +71,26 @@ section {
             @include breakpoint(md, min) {
                 margin-top: 0;
                 grid-template-areas: "c1  c2    c3";
-                gap: 2.5rem;
+                gap: 3rem;
             }
         }
     }
     .banner {
         grid-area: banner;
-        background-image: url("/assets/images/image-web-3-mobile.jpg");
+
+        background: url("/assets/images/image-web-3-mobile.jpg") $dark-blue;
         background-position: center center;
-        background-size: 100% 100%;
-        object-fit: cover;
         background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 300px;
 
         @include breakpoint(md, min) {
-            background-image: url("/assets/images/image-web-3-desktop.jpg");
+            background: url("/assets/images/image-web-3-desktop.jpg");
+            background-position: center center;
+            background-size: 100% 100%;
+            height: 300px;
+            width: 100%;
         }
     }
 

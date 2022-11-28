@@ -59,6 +59,7 @@ header {
         .menu-containers {
             .menu-items {
                 display: flex;
+
                 li {
                     line-height: 1.5;
                     padding: 0.5rem 1rem;
@@ -113,22 +114,38 @@ header {
                     z-index: 1;
                     cursor: pointer;
                     transition: all 0.2s;
+
+                    &.hide {
+                        //display: none;
+                        @include opacity_visibility-hidden;
+                    }
+
+                    &.clicked {
+                        display: block;
+                        visibility: visible;
+                        opacity: 1;
+                    }
                 }
                 .icon-close {
                     display: none;
-                    visibility: hidden;
-                    opacity: 0;
+                    @include opacity_visibility-hidden;
+                    position: absolute;
+                    top: 3rem;
+                    right: $p-1;
+                    z-index: 1;
+                    cursor: pointer;
+                    transition: all 0.2s;
+
+                    &.clicked {
+                        display: block;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                    &.hide {
+                        //display: none;
+                        @include opacity_visibility-hidden;
+                    }
                 }
-            }
-            .menu_close {
-                display: block;
-                position: absolute;
-                top: 2rem;
-                right: $p-1;
-                z-index: 1;
-                cursor: pointer;
-                transition: all 0.2s;
-                @include opacity_visibility-hidden;
             }
         }
     }
