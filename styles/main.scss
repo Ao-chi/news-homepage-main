@@ -11,6 +11,8 @@ body {
     @include Inter-font;
     box-sizing: border-box;
     overflow-x: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 section {
@@ -33,7 +35,6 @@ section {
         display: grid;
         padding: $p-1;
         gap: 1rem;
-
         grid-template-areas:
             "banner"
             "s2"
@@ -53,20 +54,26 @@ section {
     }
     .banner {
         grid-area: banner;
-
-        background: url("/assets/images/image-web-3-mobile.jpg") $dark-blue;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        overflow: hidden;
         height: 300px;
-
-        @include breakpoint(md, min) {
-            background: url("/assets/images/image-web-3-desktop.jpg");
+        .banner-inner {
+            background: url("/assets/images/image-web-3-mobile.jpg") $dark-blue;
             background-position: center center;
-            background-size: 100% 100%;
-            height: 300px;
-            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.2);
+            }
+            @include breakpoint(md, min) {
+                background: url("/assets/images/image-web-3-desktop.jpg");
+                background-position: center center;
+                background-size: 100% 100%;
+                height: 300px;
+                width: 100%;
+            }
         }
     }
 
@@ -141,7 +148,7 @@ section {
             cursor: pointer;
             transition: ease-in-out 0.2s;
 
-            a {
+            span {
                 color: $off-white;
                 font-size: font-size(font-12);
                 letter-spacing: 5px;

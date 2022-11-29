@@ -9,6 +9,8 @@ header {
     padding-top: $p-3;
     @include display-flex;
     z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
 
     .wrapper {
         @include display-flex;

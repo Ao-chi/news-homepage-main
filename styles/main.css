@@ -128,6 +128,8 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 header .wrapper {
   display: flex;
@@ -268,6 +270,8 @@ body {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 section {
@@ -306,15 +310,23 @@ section .grid-container {
 }
 section .banner {
   grid-area: banner;
+  overflow: hidden;
+  height: 300px;
+}
+section .banner .banner-inner {
   background: url("/assets/images/image-web-3-mobile.jpg") hsl(240deg, 100%, 5%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 100%;
+  transition: all 0.3s;
+}
+section .banner .banner-inner:hover {
+  transform: scale(1.2);
 }
 @media (min-width: 992px) {
-  section .banner {
+  section .banner .banner-inner {
     background: url("/assets/images/image-web-3-desktop.jpg");
     background-position: center center;
     background-size: 100% 100%;
@@ -389,7 +401,7 @@ section .desc button {
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
-section .desc button a {
+section .desc button span {
   color: hsl(36deg, 100%, 99%);
   font-size: 12px;
   letter-spacing: 5px;
