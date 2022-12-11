@@ -34,3 +34,13 @@ let toggleFunciton = () => {
 };
 
 toggleFunciton();
+
+overlay.addEventListener(
+    "click",
+    (closeNavOnOutsideClick = () => {
+        if (overlay.classList.contains("active")) {
+            nav.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+    })
+);
