@@ -42,6 +42,7 @@ overlay.addEventListener(
             nav.classList.remove("active");
             overlay.classList.remove("active");
             iconClose.classList.remove("clicked");
+            iconMenu.classList.remove("hide");
         }
     })
 );
