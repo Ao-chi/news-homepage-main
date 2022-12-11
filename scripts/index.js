@@ -41,6 +41,7 @@ overlay.addEventListener(
         if (overlay.classList.contains("active")) {
             nav.classList.remove("active");
             overlay.classList.remove("active");
+            iconClose.classList.remove("clicked");
         }
     })
 );
